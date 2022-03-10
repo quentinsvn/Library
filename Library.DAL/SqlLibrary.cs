@@ -63,6 +63,36 @@ namespace Library.DAL
         }
         #endregion
 
+        #region Genre
+        public int Set_Genre(int id, string name)
+        {
+            int returnValue;
+
+            try
+            {
+                SqlCommand sqlCommand = new SqlCommand("Set_Genre", sqlConnection);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                sqlCommand.Parameters.AddWithValue("@Id", id);
+                sqlCommand.Parameters.AddWithValue("@Name", name);
+
+                sqlCommand.Parameters.Add("@OutputId", SqlDbType.Int);
+                sqlCommand.Parameters["@OutputId"].Direction = ParameterDirection.Output;
+
+                sqlCommand.ExecuteNonQuery();
+
+                returnValue = (int)sqlCommand.Parameters["@OutputId"].Value;
+            }
+            catch
+            {
+                // Do something
+                returnValue = -1;
+            }
+
+            return returnValue;
+        }
+        #endregion
+
         #region IDisposable
         public void Dispose()
         {

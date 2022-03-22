@@ -85,38 +85,28 @@ namespace Library.ConsoleApp
 
         public void DisplayMoviesCountByGenre()
         {
-            List<Movie> list;
 
             GenreCollection genres = new GenreCollection();
 
             genres.GetAll();
 
-            Console.WriteLine("******************** TestBLL - DisplayMoviesCountByGenre ********************");
-            foreach ( Genre genre in genres.OrderBy(g => g.Name))
+            foreach (Genre genre in genres.OrderBy(genre => genre.Name))
             {
                 MovieCollection movies = new MovieCollection();
                 movies.Get_ByGenreId(genre.Id);
 
+                // display genre
                 string displayGenre = $"Genre : {genre.Name}, nb movies : {movies.Count}";
+                Console.WriteLine(displayGenre);
             }
 
-            Console.WriteLine();
-
-            var list = (from genre in genres
-                        orderby genre.Name ascending
-                        select new
-                        {
-                            genre.Name,
-                            genre.Movies.Count
-                        }).ToList();
+            Console.WriteLine("******************** TestBLL - DisplayMoviesCountByGenre ********************");
 
 
-            foreach ( var item in list)
-            {
-                Console.WriteLine($"Genre :" { item.Name }, )
-            }
 
-            DisplayMovies(list);
+            //DisplayMovies(list);
+
+
         }
 
         private void DisplayMovies(List<Movie> movies)

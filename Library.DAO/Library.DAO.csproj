@@ -58,7 +58,16 @@
     <Compile Include="Migrations\202203221747264_Initial.designer.cs">
       <DependentUpon>202203221747264_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202203241631462_AddActor.cs" />
+    <Compile Include="Migrations\202203241631462_AddActor.designer.cs">
+      <DependentUpon>202203241631462_AddActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202203241637524_AddActorBirthDate.cs" />
+    <Compile Include="Migrations\202203241637524_AddActorBirthDate.designer.cs">
+      <DependentUpon>202203241637524_AddActorBirthDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Actor.cs" />
     <Compile Include="Model\Genre.cs" />
     <Compile Include="Context\LibraryContext.cs" />
     <Compile Include="Model\Movie.cs" />
@@ -71,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202203221747264_Initial.resx">
       <DependentUpon>202203221747264_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203241631462_AddActor.resx">
+      <DependentUpon>202203241631462_AddActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202203241637524_AddActorBirthDate.resx">
+      <DependentUpon>202203241637524_AddActorBirthDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

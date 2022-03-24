@@ -13,6 +13,7 @@ namespace Library.DAO.Model
         public Movie()
         {
             Genres = new HashSet<Genre>();
+            Actors = new HashSet<Actor>();
         }
 
         public int Id { get; set; }
@@ -27,5 +28,8 @@ namespace Library.DAO.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Genre> Genres { get; set; }
+
+        public virtual ICollection<Actor> Actors { get; set; }
+
     }
 }

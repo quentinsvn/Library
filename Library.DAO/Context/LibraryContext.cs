@@ -18,12 +18,20 @@ namespace Library.DAO.Context
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Movie> Movies { get; set; }
 
+        public virtual DbSet<Actor> Actors { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Genre>()
                 .HasMany(e => e.Movies)
                 .WithMany(e => e.Genres)
                 .Map(m => m.ToTable("Link_MovieGenre").MapLeftKey("GenreId").MapRightKey("MovieId"));
+
+            modelBuilder.Entity<Actor>()
+                .HasMany(e => e.Movies)
+                .WithMany(e => e.Actors)
+                .Map(m => m.ToTable("Link_MovieActor")
+                .MapLeftKey("ActorId").MapRightKey("MovieId"));
         }
     }
 }

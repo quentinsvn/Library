@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.ConsoleApp", "Libra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.DAO", "Library.DAO\Library.DAO.csproj", "{241C671C-BF19-49CE-A60B-B3A5489A0DBA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library.WebTest", "Library.WebTest\Library.WebTest.csproj", "{51C832DC-3082-41E4-9094-A3930055E3EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{241C671C-BF19-49CE-A60B-B3A5489A0DBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{241C671C-BF19-49CE-A60B-B3A5489A0DBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{241C671C-BF19-49CE-A60B-B3A5489A0DBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51C832DC-3082-41E4-9094-A3930055E3EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51C832DC-3082-41E4-9094-A3930055E3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51C832DC-3082-41E4-9094-A3930055E3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51C832DC-3082-41E4-9094-A3930055E3EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

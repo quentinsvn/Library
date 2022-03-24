@@ -1,0 +1,11 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+.divForm
+{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom:20px;
+}

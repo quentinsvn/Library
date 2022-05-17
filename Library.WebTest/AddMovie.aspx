@@ -27,7 +27,18 @@
             <asp:TextBox ID="tbImageUrl" runat="server" />
         </div>
 
-        <asp:Button ID="btValidate" runat="server" Text="Ajouter" />
+        <div class="divForm">
+            <asp:Label ID="lblGenre" runat="server" Text="Genres : " />
+            <asp:ListBox ID="lbxGenres" runat="server" SelectionMode="Multiple" Height="200" />
+        </div>
+
+        <div class="divForm">
+            <asp:Button ID="btValidate" runat="server" Text="Ajouter" OnClick="btValidate_Click" />
+        </div>
+
+        <div>
+            <asp:Label ID="lblMessage" runat="server" />
+        </div>
     </form>
 </body>
 </html>

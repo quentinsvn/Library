@@ -2,18 +2,51 @@
     box-sizing: border-box;
 }
 
-.divForm
-{
+.divForm {
     display: flex;
     flex-direction: column;
     width: 400px;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .red {
     color: red;
 }
 
-.green{
+.green {
     color: green;
 }
+
+.movies-box-container {
+    margin: 5px;
+    border: solid 1px grey;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+    .movies-box-container .movie-box {
+        width: 300px;
+        border: solid 1px black;
+        margin: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .movies-box-container .movie-box img {
+            max-height: 400px;
+        }
+
+        .movies-box-container .movie-box .movie-genre {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+            .movies-box-container .movie-box .movie-genre span {
+                background-color: gray;
+                color: white;
+                padding: 3px;
+            }
